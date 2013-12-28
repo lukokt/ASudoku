@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#C8C8C8</color>
+    <color name="board_bg_dark">#B8B8B8</color>
+    <color name="board_bg_light">#C8C8C8</color>
+    <color name="board_light_line">#D0D0D0</color>
+    <color name="board_dark_line">#787878</color>
+    <color name="board_highlight">#FFFFFF</color>
+    <color name="board_field_font">#000000</color>
+    <color name="board_field_font_error">#ffff0a1e</color>
+    <color name="board_field_font_editable">#ff1e5010</color>
+    <color name="non_board_bg">#000000</color>
+
+</resources>

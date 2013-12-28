@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:layout_gravity="center"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true">
+
+    <TableRow>
+
+        <Button android:id="@+id/keyboard_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_1" />
+
+        <Button android:id="@+id/keyboard_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_2" />
+
+        <Button android:id="@+id/keyboard_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_3" />
+    </TableRow>
+
+    <TableRow>
+        <Button android:id="@+id/keyboard_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_4" />
+
+        <Button android:id="@+id/keyboard_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_5" />
+
+        <Button android:id="@+id/keyboard_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_6" />
+    </TableRow>
+
+    <TableRow>
+        <Button android:id="@+id/keyboard_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_7" />
+
+        <Button android:id="@+id/keyboard_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_8" />
+
+        <Button android:id="@+id/keyboard_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_keyboard_9" />
+    </TableRow>
+
+</TableLayout>

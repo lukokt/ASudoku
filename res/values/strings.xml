@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ASudoku</string>
+    <string name="main_title">Sudoku inne niż wszystkie</string>
+
+    <string name="label_new_game">Nowa gra</string>
+    <string name="label_continue">Kontynuuj</string>
+    <string name="label_info">Informacje</string>
+    <string name="label_exit">Wyjście</string>
+
+    <string name="info_text_content">Sudoku – łamigłówka, której celem jest wypełnienie diagramu 9x9 w taki sposób, aby w każdym wierszu, w każdej kolumnie i w każdym z dziewięciu pogrubionych kwadratów 3x3 (zwanych "blokami" lub "podkwadratami") znalazło się po jednej cyfrze od 1 do 9.</string>
+
+    <string name="menu_label_settings">Ustawienia ...</string>
+    <string name="menu_title_settings">Ustawienia gry Sudoku</string>
+    <string name="menu_shortcut_settings">s</string>
+
+    <string name="label_choose_level">Poziom</string>
+    <string name="menu_label_level_easy">Łatwy</string>
+    <string name="menu_label_level_medium">Normalny</string>
+    <string name="menu_label_level_hard">Trudny</string>
+
+    <string name="title_game_over">Gratulacje wygrałeś !!!</string>
+
+    <string name="music_title">Muzyka</string>
+    <string name="music_summary">Odtwarza muzykę w tle</string>
+
+    <string name="hints_title">Podpowiedzi</string>
+    <string name="prefs_key_hints">prefs_key_hints</string>
+    <string name="hints_summary">Wyświetlanie podpowiedzi w trakcie gry</string>
+
+    <string name="ok">Ok</string>
+
+    <string name="label_keyboard_1">1</string>
+    <string name="label_keyboard_2">2</string>
+    <string name="label_keyboard_3">3</string>
+    <string name="label_keyboard_4">4</string>
+    <string name="label_keyboard_5">5</string>
+    <string name="label_keyboard_6">6</string>
+    <string name="label_keyboard_7">7</string>
+    <string name="label_keyboard_8">8</string>
+    <string name="label_keyboard_9">9</string>
+    <string name="prefs">true</string>
+
+</resources>
