@@ -1,6 +1,10 @@
 package pl.lukok.asudoku.entity;
 
+import android.content.Context;
+import android.graphics.Canvas;
 import android.widget.ImageView;
+import pl.lukok.asudoku.R;
+import pl.lukok.asudoku.activity.Settings;
 
 public class SudokuField {
 
@@ -16,10 +20,14 @@ public class SudokuField {
 
     private int originalValue;
 
+ //   public ImageView image;
+
     public int x, y;
 
     public SudokuField(int x, int y) {
 
+   //     this.image = new ImageView(context);
+        //super(context);
         this.x = x;
         this.y = y;
         this.clear();
@@ -86,7 +94,17 @@ public class SudokuField {
     }
 
     public String toString() {
-        return "Field val:" + this.getValue() + " (" + this.x + ", " + this.y +")";
+        return Integer.toString(getValue());
+    }
+
+    public int getFontColor(Context context) {
+        if (Settings.getHints(context) && hasCollision()) {
+            return R.color.board_field_font_error;
+        } else if (isEditable()) {
+            return R.color.board_field_font_editable;
+        }
+
+        return R.color.board_field_font;
     }
 }
 

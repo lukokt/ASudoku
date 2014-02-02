@@ -10,18 +10,17 @@ import android.view.View;
 import android.view.animation.*;
 import pl.lukok.asudoku.activity.StartGame;
 import pl.lukok.asudoku.entity.SudokuField;
+import pl.lukok.asudoku.entity.SudokuGame;
 import pl.lukok.asudoku.gui.GameOverDialog;
 import pl.lukok.asudoku.gui.KeyboardDialog;
 
-public class GameView extends View implements Animation.AnimationListener{
+public class GameView extends View /*implements Animation.AnimationListener*/{
 
     private SudokuRenderer renderer;
 
     private SudokuGame game;
 
     private Animation animation1, animation2;
-
-    private int fieldValue;
 
     public GameView(Context context) {
         super(context);
@@ -34,9 +33,8 @@ public class GameView extends View implements Animation.AnimationListener{
         setFocusable(true);
         setFocusableInTouchMode(true);
         setDrawingCacheEnabled(true);
-
         animation1 = AnimationUtils.loadAnimation(this.getContext(), R.anim.to_middle);
-        animation1.setAnimationListener(this);
+//        animation1.setAnimationListener(this);
         animation2 = AnimationUtils.loadAnimation(this.getContext(), R.anim.from_middle);
     }
 
@@ -72,10 +70,14 @@ public class GameView extends View implements Animation.AnimationListener{
         if (value >= SudokuField.INIT_VALUE) {
 
             if(game.hasActiveField()) {
-                this.fieldValue = value;
-                this.clearAnimation();
-                this.setAnimation(animation1);
-                this.startAnimation(animation1);
+
+                game.setActiveFieldValue(value);
+                game.checkActiveFieldErrors();
+                invalidate();
+
+//                this.clearAnimation();
+//                this.setAnimation(animation1);
+//                this.startAnimation(animation1);
             }
 
 
@@ -136,7 +138,7 @@ public class GameView extends View implements Animation.AnimationListener{
     }
 
 
-    @Override
+/*    @Override
     public void onAnimationStart(Animation animation) {
 
     }
@@ -161,5 +163,5 @@ public class GameView extends View implements Animation.AnimationListener{
     @Override
     public void onAnimationRepeat(Animation animation) {
 
-    }
+    }*/
 }

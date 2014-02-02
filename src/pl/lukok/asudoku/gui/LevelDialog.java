@@ -15,7 +15,7 @@ public class LevelDialog extends AlertDialog.Builder {
 
         this.setItems(R.array.game_level, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int level) {
-                ((SudokuApplication)context.getApplication()).startNewGame(level);
+                ((SudokuApplication)context.getApplication()).startNewGame(level+3);
             }
         });
 

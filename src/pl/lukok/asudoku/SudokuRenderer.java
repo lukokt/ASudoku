@@ -3,10 +3,10 @@ package pl.lukok.asudoku;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.*;
-import pl.lukok.asudoku.activity.Settings;
 import pl.lukok.asudoku.animation.FieldAnimation;
 import pl.lukok.asudoku.entity.SudokuField;
 import pl.lukok.asudoku.entity.SudokuBoard;
+import pl.lukok.asudoku.entity.SudokuGame;
 
 /**
  * Draw sudoku game - board field background etc
@@ -118,6 +118,7 @@ public class SudokuRenderer {
 
     public void render(Canvas canvas, SudokuField field) {
 
+
         Paint font = new Paint(Paint.ANTI_ALIAS_FLAG);
         font.setStyle(Paint.Style.FILL);
         font.setTextSize(fieldHeight * 0.75f);
@@ -142,20 +143,11 @@ public class SudokuRenderer {
             float deltaWidth  = fieldWidth / 2;
             float deltaHeight = fieldHeight / 2 - (fontMetrics.ascent + fontMetrics.descent) / 2;
 
-            int fontColor;
-
-            if (Settings.getHints(this.context) && field.hasCollision()) {
-                fontColor = R.color.board_field_font_error;
-            } else if (field.isEditable()) {
-                fontColor = R.color.board_field_font_editable;
-            } else {
-                fontColor = R.color.board_field_font;
-            }
+            int fontColor = field.getFontColor(context);
 
             font.setColor(resources.getColor(fontColor));
 
-            String fieldValue = Integer.toString(field.getValue());
-            canvas.drawText(fieldValue, view.left + deltaWidth, view.top + deltaHeight, font);
+            canvas.drawText(field.toString(), view.left + deltaWidth, view.top + deltaHeight, font);
         }
 
         if (field.isActive()) {

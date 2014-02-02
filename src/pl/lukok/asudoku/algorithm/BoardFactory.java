@@ -1,5 +1,6 @@
 package pl.lukok.asudoku.algorithm;
 
+import android.content.Context;
 import pl.lukok.asudoku.entity.SudokuBoard;
 
 /**
@@ -14,7 +15,14 @@ public class BoardFactory {
 
     public static SudokuBoard getBoard(IGeneratorAlgorithm algorithm, int level) {
 
-        return algorithm.generateBoard(level);
+        SudokuBoard sudokuBoard = algorithm.generateBoard();
+
+        sudokuBoard.isValid();
+        sudokuBoard.applyLevel(level);
+
+        return sudokuBoard;
     }
+
+
 
 }

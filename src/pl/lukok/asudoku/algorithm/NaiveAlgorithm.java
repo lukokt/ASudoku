@@ -1,5 +1,6 @@
 package pl.lukok.asudoku.algorithm;
 
+import android.content.Context;
 import pl.lukok.asudoku.entity.SudokuField;
 import pl.lukok.asudoku.entity.SudokuBoard;
 import pl.lukok.asudoku.SudokuUtil;
@@ -17,12 +18,12 @@ public class NaiveAlgorithm implements IGeneratorAlgorithm {
 
 
     public NaiveAlgorithm() {
-        this.board = new SudokuBoard();
+
     }
 
-    public SudokuBoard generateBoard(int level) {
+    public SudokuBoard generateBoard() {
 
-        System.out.println("Generate new board, level: " + (new Integer(level).toString()));
+        this.board = new SudokuBoard();
 
         // wypelniamy liczbami w formacie
         // 1 2 3 4 5 6 7 8 9
@@ -56,23 +57,6 @@ public class NaiveAlgorithm implements IGeneratorAlgorithm {
             this.switchRows(n, m);
             this.switchColumns(n, m);
         }
-
-        // ustawiamy pola edytowalne wzgledem poziomu trudnosci
-        SudokuField field;
-        for(int y = 0; y < SudokuBoard.FIELD_NUM; y+=3) {
-            for(int x = 0; x < SudokuBoard.FIELD_NUM; x+=3) {
-                for (int n = 0; n < level; ) {
-
-                    field = board.getField(SudokuUtil.random(x, x + 3), SudokuUtil.random(y, y + 3));
-
-                    if (!field.isEditable()) {
-                        field.initEditableField();
-                        n++;
-                    }
-                }
-            }
-        }
-
 
         return board;
     }

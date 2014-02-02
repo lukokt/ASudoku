@@ -1,5 +1,6 @@
 package pl.lukok.asudoku.algorithm;
 
+import android.content.Context;
 import pl.lukok.asudoku.entity.SudokuBoard;
 
 /**
@@ -11,7 +12,7 @@ import pl.lukok.asudoku.entity.SudokuBoard;
  */
 public class RealAlgorithm implements IGeneratorAlgorithm {
 
-    public SudokuBoard generateBoard(int level) {
+    public SudokuBoard generateBoard() {
         return null;
     }
 }
